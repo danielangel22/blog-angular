@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { APP_BASE_HREF } from '@angular/common';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { GithubComponent } from './components/github/github.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     HomeComponent,
     PostsComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GithubComponent,
   ],
   imports: [
     BrowserModule,

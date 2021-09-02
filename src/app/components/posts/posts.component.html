@@ -1,3 +1,4 @@
+
 <section *ngIf="myVideos.length >0; else other_content " class="blog-list px-3 py-5 p-md-5">
     <div class="container single-col-max-width">
         <div style="padding: 20px;">
@@ -27,9 +28,6 @@
             </div>
             <!--//item-->
         </div>
-
-
-
         <nav class="blog-nav nav nav-justified my-5">
             <a class="nav-link-prev nav-item nav-link d-none rounded-left" href="#">Previous<i
                     class="arrow-prev fas fa-long-arrow-alt-left"></i>
@@ -37,16 +35,14 @@
             <a class="nav-link-next nav-item nav-link rounded" href="#">Next<i
                     class="arrow-next fas fa-long-arrow-alt-right"></i></a>
         </nav>
-
-
     </div>
 </section>
 
 <ng-template #other_content>
     <section class="blog-list px-3 py-5 p-md-5">
         <div class="container single-col-max-width">
-                <img src="https://media0.giphy.com/media/5WILqPq29TyIkVCSej/giphy.gif?cid=ecf05e476s3wapwk321jwr8qgjaek5e9gjx6i2t8nt96bst6&rid=giphy.gif&ct=g"
-                    alt="working..">
+            <img src="https://media0.giphy.com/media/5WILqPq29TyIkVCSej/giphy.gif?cid=ecf05e476s3wapwk321jwr8qgjaek5e9gjx6i2t8nt96bst6&rid=giphy.gif&ct=g"
+                alt="working..">
         </div>
     </section>
 </ng-template>
