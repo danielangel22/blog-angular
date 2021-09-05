@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { APP_BASE_HREF } from '@angular/common';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { GithubComponent } from './components/github/github.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,8 +25,9 @@ import { GithubComponent } from './components/github/github.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
-    HttpClientModule, 
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]

@@ -1,53 +1,58 @@
-<header class="header text-center">
-    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="/">Daniel's Blog</a></h1>
-
-    <nav class="navbar navbar-expand-lg navbar-dark">
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
-            aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div id="navigation" class="collapse navbar-collapse flex-column">
-            <div class="profile-section pt-3 pt-lg-0">
-                <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile4.png" alt="image">
-
-                <div class="bio mb-3">Hello, my name is Daniel Angel. I am a software developer with java.
-                    <a routerLink="/about">Find out more about me</a>
-                </div>
-                <!--//bio-->
-                <ul class="social-list list-inline py-3 mx-auto">
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
-                </ul>
-                <!--//social-list-->
-                <hr>
-            </div>
-            <!--//profile-section-->
-
-            <ul class="navbar-nav flex-column text-start">
-                <li class="nav-item">
-                    <a class="nav-link active" [routerLink]="['/']"><i class="fas fa-home fa-fw me-2"></i>Blog Home
-                        <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/blog-post']"><i class="fas fa-bookmark fa-fw me-2"></i>Blog
-                        Post</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/github"><i class="fab fa-github fa-fw me-2"></i>Github</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/about']"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
-                </li>
+<header class="u-clearfix u-header u-header" id="sec-ff76">
+  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <a href="/" class="u-image u-logo u-image-1">
+      <img [src]="'assets/images/logo.png'" class="u-logo-image u-logo-image-1" alt="">
+    </a>
+    <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+      <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+        <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+          href="#">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+          </svg>
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                <rect y="1" width="16" height="2"></rect>
+                <rect y="7" width="16" height="2"></rect>
+                <rect y="13" width="16" height="2"></rect>
+              </symbol>
+            </defs>
+          </svg>
+        </a>
+      </div>
+      <div class="u-custom-menu u-nav-container">
+        <ul class="u-nav u-unstyled u-nav-1">
+          <li class="u-nav-item"><a
+              class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+              routerLink="/about" style="padding: 10px 20px;">About</a>
+          </li>
+          <!-- <li class="u-nav-item"><a
+              class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+              routerLink="/github" style="padding: 10px 20px;">Github</a>
+          </li> -->
+          <li class="u-nav-item"><a
+              class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+              routerLink="/blog-post" style="padding: 10px 20px;">Posts</a>
+          </li>
+        </ul>
+      </div>
+      <div class="u-custom-menu u-nav-container-collapse">
+        <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+          <div class="u-sidenav-overflow">
+            <div class="u-menu-close"></div>
+            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/about"
+                  style="padding: 10px 20px;">About</a>
+              </li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/blog-post"
+                  style="padding: 10px 20px;">Posts</a>
+              </li>
             </ul>
-
-            <div class="my-2 my-md-3">
-                <a class="btn btn-primary" href="mailto:alexandermo1233@gmail.com" target="_blank">Contact me</a>
-            </div>
+          </div>
         </div>
+        <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+      </div>
     </nav>
+  </div>
 </header>
