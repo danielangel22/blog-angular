@@ -32,4 +32,5 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
+// https://pure-hamlet-71935.herokuapp.com/
 export class AppModule { }
