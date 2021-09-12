@@ -20,11 +20,11 @@ export class AboutComponent implements OnInit {
       SmtpFromAddress : 'alexandermo1233@gmail.com'
     });
 
-    gmailService.sendMail(
-      "test2@test.com",
-      "subject",
-      "content").then( (msg) => {
-        console.log(`sendMail result :(${msg})`);
-    } );
+    // gmailService.sendMail(
+    //   "test2@test.com",
+    //   "subject",
+    //   "content").then( (msg) => {
+    //     console.log(`sendMail result :(${msg})`);
+    // } );
   }
 }
