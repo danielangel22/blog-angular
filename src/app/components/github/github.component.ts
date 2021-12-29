@@ -12,7 +12,7 @@ export class GithubComponent implements OnInit {
   config: any;
 
   constructor(private gitHubService: GithubService) {
-    console.log("loadRepos");
+    console.log("loading ... repos");
     this.gitHubService.loadRepos().subscribe(res => {
       console.log(res);
       this.repos = res;
@@ -20,7 +20,7 @@ export class GithubComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+
   }
 
 }
