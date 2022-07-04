@@ -1,62 +1,57 @@
-<section class="u-clearfix u-section-1" id="sec-457f">
-  <div class="u-clearfix u-sheet u-sheet-1">
-    <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-      <div class="u-layout">
-        <div class="u-layout-row">
-          <div class="u-container-style u-image u-layout-cell u-size-30 u-image-1" data-image-width="800"
-            data-image-height="827">
-            <div class="u-container-layout u-container-layout-1"></div>
-          </div>
-          <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-            <div class="u-container-layout u-container-layout-2">
-              <h1 class="u-text u-title u-text-1">Blog Post</h1>
-              <h5 class="u-text u-text-body-color u-text-2">I have a blog with interesting content!</h5>
-              <h4 class="u-text u-text-3">Tutorials in forms post</h4>
-              <h4 class="u-custom-font u-font-oswald u-text u-text-4">Youtube Videos.</h4>
-              <p class="u-custom-font u-font-oswald u-text u-text-5">ITecnologies more usages.</p>
-              <a href="https://www.java.com/es/about/whatis_java.jsp"
-                class="u-btn u-button-style u-gradient u-none u-text-body-alt-color u-btn-1">Java</a>
-              <a href="https://spring.io/"
-                class="u-btn u-button-style u-gradient u-none u-text-body-alt-color u-btn-2">Spring
-                boot</a>
-              <a href="https://maven.apache.org/"
-                class="u-btn u-button-style u-gradient u-none u-text-body-alt-color u-btn-3">Maven</a>
-            </div>
-          </div>
+<div class="container bg-light rounded mt-4">
+  <div class="row">
+    <div class="col">
+      <img src="https://cdn.icon-icons.com/icons2/640/PNG/512/youtube-video-social-media-play_icon-icons.com_59108.png"
+        alt="" />
+    </div>
+    <div class="col">
+      <p class="border rounded mt-4" style="text-align: center; font-size: 35px; font-family: Comic Sans MS;">Tutorials
+        on Java</p>
+      <div class="row">
+        <div class="col border rounded mt-4">
+          <p style="font-family: consolas; font-size: 24px;">Here are shown some of the videos uploaded to youtube as a
+            tutorial in which it is shown how to perform some functions that may be common in our day to day as a java
+            programmer</p>
+
+          <a class="btn btn-primary" style="font-family: consolas; font-size: 20px;"
+            href="https://www.youtube.com/channel/UCRDsrn3PX9eJdqH74Zo6eFA">Go to my youtube channel</a>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
+<div class="container bg-dark text-white  rounded mt-4" style="font-family: consolas; font-size: 24px;">
+  <h1>Last videos..</h1>
+  <div class="row align-items-start">
 
-<section class="u-clearfix u-palette-5-dark-3 u-section-2" id="sec-d14a">
-  <div class="u-clearfix u-sheet u-sheet-1">
-    <h1 class="u-text u-text-1">Latests Videos</h1>
-    <div class="u-expanded-width u-list u-list-1">
-      <div *ngIf="myVideos.length > 0; else other_content" class="u-repeater u-repeater-1">
-        <div *ngFor="let video of myVideos" class="u-container-style u-list-item u-repeater-item">
-          <div *ngIf="video.id.videoId" class="u-container-layout u-similar-container u-container-layout-1">
-            <img src="{{video.snippet.thumbnails.medium.url}}" alt=""
-              class="u-image u-image-default u-preserve-proportions u-image-1" data-image-width="626"
-              data-image-height="626">
-            <h2 class="u-text u-text-2">{{video.snippet.title}}</h2>
-            <!-- <h6 class="u-custom-font u-font-pt-sans u-text">{{video.snippet.description}}...</h6> -->
-            <h5 class="u-custom-font u-font-pt-sans u-text u-text-3">{{video.snippet.publishedAt }}</h5>
-            <!-- <h5 class="u-custom-font u-font-pt-sans u-text u-text-3">{{video.snippet.channelTitle}}</h5> -->
-            <a href="https://www.youtube.com/watch?v={{video.id.videoId}}"
-              class="u-active-white u-border-1 u-border-white u-btn u-button-style u-hover-white u-none u-text-active-palette-5-dark-3 u-text-body-alt-color u-text-hover-palette-5-dark-3 u-btn-1">watch</a>
+    <div *ngIf="myVideos.length > 0; else other_content">
+      <div *ngfor="let video of myVideos" class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="{{video.snippet.thumbnails.medium.url}}" class="card-img-top" alt="...">
+          <div class="card-title bg-dark">
+            <p class="card-text">{{ video.snippet.title }}</p>
+          </div>
+          <div class="card-body bg-dark">
+            <p class="card-text">{{ video.snippet.description }}</p>
+            <a class="btn btn-primary" href="https://www.youtube.com/watch?v={{video.id.videoId}}">Got to video</a>
           </div>
         </div>
       </div>
-      <ng-template #other_content>
-        <section class="blog-list px-3 py-5 p-md-5">
-          <div class="container single-col-max-width">
-            <img
+    </div>
+    <ng-template #other_content>
+      <section class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <img class="rounded"
               src="https://media0.giphy.com/media/5WILqPq29TyIkVCSej/giphy.gif?cid=ecf05e476s3wapwk321jwr8qgjaek5e9gjx6i2t8nt96bst6&rid=giphy.gif&ct=g"
               alt="working..">
           </div>
-        </section>
-      </ng-template>
-    </div>
+          <div class="col-md-5">
+            <p style="font-size:38px">Youtube service not available come back later, Thank you for viewing my portfolio!!</p>
+          </div>
+        </div>
+      </section>
+    </ng-template>
+
   </div>
-</section>
+</div>

@@ -14,6 +14,7 @@ export class PostsComponent implements OnInit {
   constructor(private youtubeService: YoutubeService) {
     this.youtubeService.getVideos().subscribe((resp: any) => {
       console.log(resp);
+
       this.myVideos = resp.items;
     });
   }
