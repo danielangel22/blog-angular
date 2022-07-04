@@ -15,7 +15,7 @@ export class GithubService {
   }
 
   loadRepos = () => {
-   return this.httpClient.get(`${this.url}?per_page=10`)
+   return this.httpClient.get(`${this.url}?per_page=20`)
       .pipe(map(resp => resp));
   };
 

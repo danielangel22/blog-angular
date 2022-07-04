@@ -1,38 +1,71 @@
-<section class="u-clearfix u-grey-5 u-section-1" id="sec-0500">
-  <div class="u-clearfix u-sheet u-sheet-1">
-    <div class="u-palette-2-base u-shape u-shape-rectangle u-shape-1">
+<div class="container bg-light rounded mt-3">
+  <div class="row">
+    <div class="col">
+
+      <img class="rounded-circle mt-2" src="assets/images/profile4.png" width="300" height="300" alt="" />
+      <h3>Daniel Angel</h3>
+      <h5>@danielangel22</h5>
+      <p>Java specialized software developer with an appetite for technology at all levels of the stack, including the
+        cloud and everything in between.</p>
+      <p>
+        <a href="https://github.com/danielangel22" class="link-secondary"><img
+            [src]="'https://cdn.icon-icons.com/icons2/2415/PNG/512/github_original_wordmark_logo_icon_146506.png'"
+            width="25" height="25" alt="" /> Ver mi perfil de github.</a>
+      </p>
+
     </div>
-    <img class="u-image u-image-default u-image-1" data-image-width="1620" data-image-height="1080"
-      src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fbf%2F4d%2F2d%2Fbf4d2daa4130900b8aec6af9d2ed8b56.gif&f=1&nofb=1">
-    <div class="u-align-left u-container-style u-group u-palette-1-dark-2 u-group-1">
-      <div class="u-container-layout u-valign-middle u-container-layout-1">
-        <h5 class="u-text u-text-1"> Github</h5>
-        <h1 class="u-text u-text-2"> My repositories <br>
-        </h1>
+    <div class="col">
+      <div class="rounded">
+        <p>
+          <img class="img-responsive rounded" src="assets/images/skills.png" alt="" width="650px" height="400px">
+        </p>
       </div>
     </div>
-    <div class="u-list u-list-1">
-      <div class="card-container">
-        <div *ngFor="let item of repos" class="child">
-          <div *ngIf="item.name && item.language">
-            <span [ngSwitch]="item.language">
+  </div>
+</div>
 
-              <img *ngSwitchCase="'Java' || null" class="img-circle"
-                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp6599912.jpg&f=1&nofb=1">
-              <img *ngSwitchCase="'Php' | uppercase" class="img-circle"
-                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages6.alphacoders.com%2F430%2Fthumb-1920-430917.jpg&f=1&nofb=1">
-              <img *ngSwitchCase="'Css' | uppercase" class="img-circle"
-                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2742473.jpg&f=1&nofb=1">
-              <img *ngSwitchCase="'html' | uppercase" class="img-circle"
-                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.hipwallpaper.com%2Fi%2F42%2F25%2FvWoed7.jpg&f=1&nofb=1">
+<div class="container bg-light  rounded mt-3">
+  <br>
+  <p class="h4">
+    Ultimos repositorios agregados ...
+  </p>
+  <div class="row align-items-start">
 
-            </span>
-            <h6 class="u-custom-font u-font-pt-sans u-text u-text-6"><a href="{{ item.html_url }}" target="_blank">{{ item.name | titlecase }} | {{
-                item.language }}</a> </h6>
-            <p class="u-text u-text-7">{{ item.description }}</p>
+    <div *ngFor="let item of repos" class="col" style="margin-top: 15px;">
+      <div *ngIf="item.name && item.language">
+
+        <div class="card" style="width: 18rem;" [ngSwitch]="item.language">
+          <img *ngSwitchCase="'Java' || null" class="img-circle"
+            src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png" alt="" />
+          <img *ngSwitchCase="'Php'| uppercase" class="img-circle"
+            src="https://cdn.icon-icons.com/icons2/2108/PNG/512/php_icon_130857.png" alt="" />
+          <img *ngSwitchCase="'Python'" src="https://cdn.icon-icons.com/icons2/1508/PNG/512/python_104451.png" alt="" />
+          <img *ngSwitchCase="'TypeScript'"
+            src=" https://cdn.icon-icons.com/icons2/2415/PNG/512/typescript_original_logo_icon_146317.png" alt="" />
+          <img *ngSwitchCase="'Css'| uppercase"
+            src="https://cdn.icon-icons.com/icons2/2415/PNG/512/css_plain_wordmark_logo_icon_146574.png" alt="" />
+          <img *ngSwitchCase="'html'| uppercase"
+            src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_html_icon_130541.png" alt="" />
+
+          <img *ngSwitchCase="'Kotlin'"
+            src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_kotlin_icon_130487.png" alt="" />
+
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name | titlecase }} | {{
+              item.language }}</h5>
+            <p class="card-text">{{ item.description }}</p>
+            <p class="fs-5">
+              <img
+                [src]="'https://cdn.icon-icons.com/icons2/2415/PNG/512/github_original_wordmark_logo_icon_146506.png'"
+                width="25" height="25" alt="" />
+              Created at: {{ item.created_at | date}}
+            </p>
+
+            <a href="{{ item.html_url }}" class="btn btn-primary">Go repository</a>
           </div>
+
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
